@@ -100,8 +100,34 @@ main {
 }
 
 /*===================Home=================================*/
+/*===================CARTA=================================*/
 
+.carta {
+    
+    padding: var(--space-xl) var(--space-xs) var(--space-xxxl);
+    background-color: var(--color-bg);
+}
 
+.imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;        
+    gap: var(--space-md);
+}
+
+.carta_café {
+    width: 32%;
+}
+
+.obrador {
+    width: 31%;
+}
+
+.sentado {
+    width: 40%;
+    margin-left: -130px;          
+    margin-bottom: -100px;        
+}
 /*===================FOOTER=================================*/
 
 
@@ -221,6 +247,21 @@ main {
     }
 
 
+    /* CARTA */
+
+    .carta {
+        padding: var(--space-lg) var(--space-xs) var(--space-xxl);
+    }
+
+    .imagenes {
+        gap: var(--space-xs);
+    }
+
+    .sentado {
+        margin-left: -40px;
+    }
+
+
     /* FOOTER */
 
     .footer_borde {
@@ -286,6 +327,30 @@ main {
         width: 100%;
         font-size: 13px;
         padding: 8px 24px;
+    }
+
+
+    /* CARTA */
+
+    .carta {
+        padding: var(--space-md) var(--space-xs) var(--space-xxl);
+    }
+
+    .imagenes {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-md);
+    }
+
+    .carta_café,
+    .obrador {
+        width: min(100%, 360px);
+    }
+
+    .sentado {
+        width: min(55%, 200px);
+        margin: 0;
+        align-self: flex-end;
     }
 
 
