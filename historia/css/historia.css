@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Hurricane&display=swap');
+
+:root {
+    /** Colores **/
+    --color-naranja: #FF5900;
+    --color-bg: #FFF7DD;
+    --color-marron: #533321; 
+    --color-text: #FFF7DD;
+
+    /** Space **/
+    --space-xxs: 8px;
+    --space-xs: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 70px;
+    --space-xxxl: 90px;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Alata', sans-serif;
+} 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.block {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+ul{
+    list-style: none;
+    font-family: 'Alata', sans-serif;
+    color: var(--color-marron);
+    font-size: 12px;
+
+}
+
+
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;          /* altura real en móvil, descontando la barra de Safari */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+}
+
+main {
+    flex: 1;
+}
+
+/*===================HEADER=================================*/
+
+  
+.header{
+    padding: var(--space-xl);
+    background-color: var(--color-bg);
+    
+
+    
+}
+.header_block{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo{
+    max-width: 80px;
+
+}
+.header_nav{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    justify-content: end;
+    text-align: end;
+    font-size: 15px;
+}
+
+.link_menu{
+    &:hover{
+    color: var(--color-naranja);
+    }
+
+}
+
+/*===================Historia=================================*/
+
+/*===================FOOTER=================================*/
+
+
+.footer_borde{
+    display: flex;
+    align-items: flex-end;            
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 20px 0 20px;
+    border: solid 2px var(--color-marron);
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.img_footer{
+    max-width: 500px;
+    flex-shrink: 0;                 
+}
+
+.footer_r{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;           
+    gap: 30px;
+}
+
+.footer_icons{
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.icon{
+    display: block;
+    width: 20px;
+}
+.icon img{
+    width: 100%;
+    display: block;
+}
+
+.footer_final{
+    width: 180%;
+}
+
+.footer_legal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px var(--color-naranja);
+    margin-bottom: 5px;
+    
+}
+
+.footer_text_small{
+    font-family: 'Alata', sans-serif;
+    font-size: 10px;
+    color: #7b6457;
+}
+
+.icons{
+    display: flex;
+    gap: 40px;
+    font-size: 10px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+    color: #7b6457;
+}
+
+.footer_links{
+    display: flex;
+    gap: 30px;
+    font-family: 'Alata', sans-serif;
+    font-size: 10px;
+    color: #7b6457;
+}
+
+/* ==========================================
+   RESPONSIVE - TABLETS
+========================================== */
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+    /* HEADER */
+
+    .header {
+        padding: var(--space-lg);
+    }
+
+    .logo {
+        max-width: 70px;
+    }
+
+
+    /* HOME */
+
+    .home {
+        padding: 40px 30px;
+    }
+
+    .home_contents {
+        margin-top: 0;
+        gap: var(--space-md);
+    }
+
+    .home_img {
+        width: min(55%, 300px);
+    }
+
+    .btn,
+    .home_btn {
+        gap: 40px;
+    }
+
+
+    /* CARTA */
+
+    .carta {
+        padding: var(--space-lg) var(--space-xs) var(--space-xxl);
+    }
+
+    .imagenes {
+        gap: var(--space-xs);
+    }
+
+    .sentado {
+        margin-left: -40px;
+    }
+
+
+    /* FOOTER */
+
+    .footer_borde {
+        gap: var(--space-md);
+        padding: var(--space-xl) var(--space-xs) 0;
+    }
+
+    .img_footer {
+        max-width: 280px;
+    }
+
+    .footer_final {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE - MÓVILES
+========================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* HEADER */
+
+    .header {
+        padding: 20px 15px;
+    }
+
+    .logo {
+        max-width: 55px;
+    }
+
+    .header_nav {
+        font-size: 14px;
+        gap: 6px;
+    }
+
+
+    /* HOME */
+
+    .home {
+        padding: 35px 20px;
+    }
+
+    .home_contents {
+        margin-top: 0;
+        gap: 20px;
+    }
+
+    .home_img {
+        width: min(80%, 260px);
+    }
+
+    .btn,
+    .home_btn {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-xs);
+    }
+
+    .home_btn {
+        width: 100%;
+        font-size: 13px;
+        padding: 8px 24px;
+    }
+
+
+    /* CARTA */
+
+    .carta {
+        padding: var(--space-md) var(--space-xs) var(--space-xxl);
+    }
+
+    .imagenes {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-md);
+    }
+
+    .carta_café,
+    .obrador {
+        width: min(100%, 360px);
+    }
+
+    .sentado {
+        width: min(55%, 200px);
+        margin: 0;
+        align-self: flex-end;
+    }
+
+
+    /* FOOTER */
+
+    .footer_borde {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 15px 0;
+        text-align: center;
+    }
+
+    .img_footer {
+        max-width: 180px;
+    }
+
+    .footer_r {
+        width: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer_icons {
+        justify-content: center;
+    }
+
+    .footer_final {
+        width: 100%;
+    }
+
+    .footer_legal {
+        flex-direction: column;
+        gap: var(--space-xxs);
+        padding-top: var(--space-xxs);
+        text-align: center;
+    }
+
+    .icons,
+    .footer_links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-xs);
+    }
+
+    .footer_text_small,
+    .icons,
+    .footer_links,
+    ul {
+        font-size: 12px;
+    }
+}
