@@ -225,6 +225,11 @@ main {
     font-family: 'Alata', sans-serif;
     font-size: 10px;
     color: #7b6457;
+
+      &:hover{
+    color: var(--color-naranja);
+    }
+
 }
 
 /* ==========================================
