@@ -130,7 +130,7 @@ main {
 
 }
 
-.home_btn{
+.home_btn1{
     display: flex;
     gap: 100px;
     font-family: 'Alata', sans-serif;
@@ -139,6 +139,26 @@ main {
     background-color: var(--color-marron);
     color: var(--color-text);
     padding: 2px 40px;
+
+    &:hover{
+        background-color: #FF5900;
+    }
+   
+}
+
+.home_btn2{
+    display: flex;
+    gap: 100px;
+    font-family: 'Alata', sans-serif;
+    font-size: 14px;
+    border-radius: 70px;
+    background-color: var(--color-marron);
+    color: var(--color-text);
+    padding: 2px 30px;
+
+    &:hover{
+        background-color: #FF5900;
+    }
    
 }
 .home_text {
